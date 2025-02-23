@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import Navigation from './Navigation';
-import Footer from './Footer';
 
 const Terms: FC = () => {
   return (
@@ -141,7 +140,6 @@ const Terms: FC = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

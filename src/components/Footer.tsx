@@ -51,7 +51,7 @@ const Footer: FC = () => {
               <div className="flex space-x-4">
                 <a href="/terms" className="text-[#b8bbd3] hover:text-white transition">Terms & Conditions</a>
                 <span className="text-[#b8bbd3]">|</span>
-                <a href="#privacy" className="text-[#b8bbd3] hover:text-white transition">Privacy Policy</a>
+                <a href="/privacy" className="text-[#b8bbd3] hover:text-white transition">Privacy Policy</a>
               </div>
             </div>
           </div>
