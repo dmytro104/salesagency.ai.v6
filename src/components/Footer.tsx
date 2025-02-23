@@ -9,7 +9,7 @@ const Footer: FC = () => {
             <div className="flex flex-col space-y-4 mb-6 md:mb-0">
               <div className="flex items-center">
                 <img
-                  src="https://www.salesagency.ai/Images/nav-logo.svg"
+                  src="./nav-logo.svg"
                   alt="SalesAgency.ai Logo"
                   className="h-8 w-auto mr-2"
                 />

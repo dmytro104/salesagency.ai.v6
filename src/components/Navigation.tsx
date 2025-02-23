@@ -7,7 +7,7 @@ const Navigation: FC = () => {
         <div className="flex justify-between items-center h-16">
           <a href="/" className="flex items-center">
             <img
-              src="https://www.salesagency.ai/Images/nav-logo.svg"
+              src="./nav-logo.svg"
               alt="SalesAgency.ai Logo"
               className="h-8 w-auto"
             />
