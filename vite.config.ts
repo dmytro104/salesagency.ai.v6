@@ -7,4 +7,11 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  base: '/salesagency.ai.v6/', // 👈 Add this for GitHub Pages (change to match your repo name)
+  build: {
+    outDir: 'dist',
+  },
+  server: {
+    historyApiFallback: true,
+  }
 });
