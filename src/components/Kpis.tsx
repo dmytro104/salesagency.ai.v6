@@ -22,7 +22,7 @@ import {
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
           The Story Your Numbers Tell:
-          <span className="block mt-2 mb-1 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
+          <span className="block mt-2 mb-2 pb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
             A Journey Through Your Sales Funnel
           </span>
         </h2>
