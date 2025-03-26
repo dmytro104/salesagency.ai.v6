@@ -76,7 +76,7 @@ import {
             </div>
             
             <a
-              href="https://projectlegacy.rapidcloser.io/widget/bookings/salesagencyai-discovery"
+              href="https://api.salesagency.ai/widget/bookings/salesagencyai-discovery"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full mt-auto px-8 py-4 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20"
@@ -137,7 +137,7 @@ import {
             </div>
             
             <a
-              href="https://projectlegacy.rapidcloser.io/widget/bookings/salesagencyai-discovery"
+              href="https://api.salesagency.ai/widget/bookings/salesagencyai-discovery"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full mt-auto px-8 py-4 bg-gray-700 text-white rounded-xl font-semibold hover:bg-gray-600 transition flex items-center justify-center gap-2 border border-white/10"
