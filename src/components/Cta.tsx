@@ -20,7 +20,7 @@ import {
         Don't just adapt to the future of sales - lead it. Join the elite businesses leveraging AI to dominate their market.
       </p>
       <a
-        href="https://projectlegacy.rapidcloser.io/widget/bookings/salesagencyai-discovery"
+        href="https://api.salesagency.ai/widget/bookings/salesagencyai-discovery"
         target="_blank"
         rel="noopener noreferrer"
         className="group px-12 py-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-2xl font-bold text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30 hover:from-blue-500 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 flex items-center gap-3 mx-auto"
