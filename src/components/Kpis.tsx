@@ -280,7 +280,7 @@ import {
           Let's turn your metrics into a compelling narrative of growth and success with AI-enhanced tracking and optimization.
         </p>
         <a
-          href="https://projectlegacy.rapidcloser.io/widget/bookings/salesagencyai-discovery"
+          href="https://api.salesagency.ai/widget/bookings/salesagencyai-discovery"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl font-semibold hover:from-blue-500 hover:to-blue-600 transition items-center gap-2 mx-auto"
