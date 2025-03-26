@@ -14,7 +14,7 @@ const Navigation: FC = () => {
           </a>
           <div className="hidden md:flex items-center space-x-8">
             <a 
-              href="https://projectlegacy.rapidcloser.io/widget/bookings/salesagencyai-discovery"
+              href="https://api.salesagency.ai/widget/bookings/salesagencyai-discovery"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition"
