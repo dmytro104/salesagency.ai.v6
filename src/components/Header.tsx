@@ -20,7 +20,7 @@ const Header: FC = () => {
         </p>
         <div className="flex justify-center gap-4">
           <a
-            href="https://projectlegacy.rapidcloser.io/widget/bookings/salesagencyai-discovery"
+            href="https://api.salesagency.ai/widget/bookings/salesagencyai-discovery"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition flex items-center gap-2"
