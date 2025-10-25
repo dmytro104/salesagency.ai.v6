@@ -1,26 +1,148 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+@theme {
+  --radius: 0.5rem;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Light mode colors */
+  --color-background: oklch(100% 0 0);
+  --color-foreground: oklch(10% 0 0);
+
+  --color-card: oklch(100% 0 0);
+  --color-card-foreground: oklch(10% 0 0);
+
+  --color-popover: oklch(100% 0 0);
+  --color-popover-foreground: oklch(10% 0 0);
+
+  --color-primary: oklch(60% 0.25 290);
+  --color-primary-foreground: oklch(100% 0 0);
+
+  --color-secondary: oklch(96% 0 0);
+  --color-secondary-foreground: oklch(10% 0 0);
+
+  --color-muted: oklch(96% 0 0);
+  --color-muted-foreground: oklch(45% 0 0);
+
+  --color-accent: oklch(96% 0 0);
+  --color-accent-foreground: oklch(10% 0 0);
+
+  --color-destructive: oklch(60% 0.25 30);
+  --color-destructive-foreground: oklch(100% 0 0);
+
+  --color-border: oklch(90% 0 0);
+  --color-input: oklch(96% 0 0);
+  --color-ring: oklch(60% 0.25 290);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark mode overrides */
+:root.dark {
+  --color-background: oklch(12% 0 0);
+  --color-foreground: oklch(98% 0 0);
+
+  --color-card: oklch(16% 0 0);
+  --color-card-foreground: oklch(98% 0 0);
+
+  --color-popover: oklch(16% 0 0);
+  --color-popover-foreground: oklch(98% 0 0);
+
+  --color-primary: oklch(65% 0.25 290);
+  --color-primary-foreground: oklch(100% 0 0);
+
+  --color-secondary: oklch(18% 0 0);
+  --color-secondary-foreground: oklch(98% 0 0);
+
+  --color-muted: oklch(18% 0 0);
+  --color-muted-foreground: oklch(60% 0 0);
+
+  --color-accent: oklch(18% 0 0);
+  --color-accent-foreground: oklch(98% 0 0);
+
+  --color-destructive: oklch(50% 0.2 30);
+  --color-destructive-foreground: oklch(100% 0 0);
+
+  --color-border: oklch(24% 0 0);
+  --color-input: oklch(18% 0 0);
+  --color-ring: oklch(65% 0.25 290);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* 8px Baseline Grid Spacing System
+ * All spacing follows 8px increments for visual consistency
+ *
+ * Section Spacing:
+ * - Hero: py-24 sm:py-32 lg:py-40 (96px/128px/160px)
+ * - Regular Sections: py-16 sm:py-24 (64px/96px)
+ * - Compact Sections: py-16 (64px)
+ *
+ * Component Spacing:
+ * - Tight: gap-4 (16px)
+ * - Medium: gap-8 (32px)
+ * - Large: gap-16 (64px)
+ *
+ * Separators: my-16 sm:my-24 (64px/96px)
+ */
+
+/* Gradient Mesh Backgrounds - Phase 13 */
+.gradient-mesh {
+  background:
+    radial-gradient(at 27% 37%, oklch(65% 0.25 290 / 0.1) 0px, transparent 50%),
+    radial-gradient(at 97% 21%, oklch(65% 0.25 290 / 0.08) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, oklch(65% 0.25 290 / 0.06) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, oklch(65% 0.25 290 / 0.05) 0px, transparent 50%);
+}
+
+@keyframes gradient-shift {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.animate-gradient {
+  animation: gradient-shift 8s ease-in-out infinite;
+}
+
+/* Glassmorphism Effects - Phase 13 */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+:root.dark .glass {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Card Elevation System - Phase 13 */
+.card-elevated {
+  box-shadow:
+    0 1px 2px 0 rgb(0 0 0 / 0.05),
+    0 0 0 1px rgb(0 0 0 / 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-elevated:hover {
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform: translateY(-2px);
+}
+
+/* Icon Float Animation - Phase 14 */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.icon-float:hover {
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Remove borders in dark mode */
+:root.dark [data-slot="accordion-item"],
+:root.dark .border {
+  border-color: transparent;
+}
+
+:root.dark [data-slot="badge"][data-variant="outline"] {
+  border-color: transparent;
 }
