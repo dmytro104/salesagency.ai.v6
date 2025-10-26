@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
+@variant dark (.dark &);
+
 @theme {
   --radius: 0.5rem;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
   /* Light mode colors */
-  --color-background: oklch(100% 0 0);
+  --color-background: oklch(98.5% 0 0); /* #fbfbfb */
   --color-foreground: oklch(10% 0 0);
 
-  --color-card: oklch(100% 0 0);
+  --color-card: oklch(98.5% 0 0); /* #fbfbfb */
   --color-card-foreground: oklch(10% 0 0);
 
-  --color-popover: oklch(100% 0 0);
+  --color-popover: oklch(98.5% 0 0); /* #fbfbfb */
   --color-popover-foreground: oklch(10% 0 0);
 
   --color-primary: oklch(60% 0.25 290);
@@ -36,8 +38,8 @@
 }
 
 /* Dark mode overrides */
-:root.dark {
-  --color-background: oklch(12% 0 0);
+.dark {
+  --color-background: oklch(7.5% 0 0); /* #121212 */
   --color-foreground: oklch(98% 0 0);
 
   --color-card: oklch(16% 0 0);
@@ -107,7 +109,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-:root.dark .glass {
+.dark .glass {
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -138,11 +140,11 @@
 }
 
 /* Remove borders in dark mode */
-:root.dark [data-slot="accordion-item"],
-:root.dark .border {
+.dark [data-slot="accordion-item"],
+.dark .border {
   border-color: transparent;
 }
 
-:root.dark [data-slot="badge"][data-variant="outline"] {
+.dark [data-slot="badge"][data-variant="outline"] {
   border-color: transparent;
 }

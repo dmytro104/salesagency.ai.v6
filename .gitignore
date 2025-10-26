@@ -34,3 +34,6 @@ coverage/
 *.cache
 .vercel/
 
+
+# Moat task system
+.moat/

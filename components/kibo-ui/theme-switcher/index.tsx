@@ -2,9 +2,9 @@
 
 import { useControllableState } from "@radix-ui/react-use-controllable-state";
 import { Monitor, Moon, Sun } from "lucide-react";
-import { motion } from "motion/react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback } from "react";
 import { cn } from "@/lib/utils";
+import "./theme-switcher.css";
 
 const themes = [
   {
@@ -37,12 +37,11 @@ export const ThemeSwitcher = ({
   defaultValue = "system",
   className,
 }: ThemeSwitcherProps) => {
-  const [theme, setTheme] = useControllableState({
+  const [, setTheme] = useControllableState({
     defaultProp: defaultValue,
     prop: value,
     onChange,
   });
-  const [mounted, setMounted] = useState(false);
 
   const handleThemeClick = useCallback(
     (themeKey: "light" | "dark" | "system") => {
@@ -51,46 +50,28 @@ export const ThemeSwitcher = ({
     [setTheme]
   );
 
-  // Prevent hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
-
   return (
     <div
       className={cn(
-        "relative isolate flex h-8 rounded-full bg-background p-1 ring-1 ring-border",
+        "relative isolate flex items-center h-8 rounded-full bg-background p-1 ring-1 ring-border",
         className
       )}
     >
       {themes.map(({ key, icon: Icon, label }) => {
-        const isActive = theme === key;
-
         return (
           <button
             aria-label={label}
-            className="relative h-6 w-6 rounded-full"
+            data-theme-key={key}
+            className="theme-switcher-button relative h-6 w-6 rounded-full cursor-pointer flex items-center justify-center"
             key={key}
             onClick={() => handleThemeClick(key as "light" | "dark" | "system")}
             type="button"
           >
-            {isActive && (
-              <motion.div
-                className="absolute inset-0 rounded-full bg-secondary"
-                layoutId="activeTheme"
-                transition={{ type: "spring", duration: 0.5 }}
-              />
-            )}
-            <Icon
-              className={cn(
-                "relative z-10 m-auto h-4 w-4",
-                isActive ? "text-foreground" : "text-muted-foreground"
-              )}
-            />
+            {/* Background - visibility and color controlled by CSS based on html theme class */}
+            <div className="theme-switcher-bg absolute inset-0 rounded-full transition-opacity duration-200" />
+
+            {/* Icon - opacity controlled by CSS based on html theme class */}
+            <Icon className="theme-switcher-icon relative z-10 h-4 w-4" />
           </button>
         );
       })}
