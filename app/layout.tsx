@@ -14,10 +14,28 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Dynamic base URL - works for production, Vercel previews, and local dev
+const getBaseUrl = () => {
+  // 1. Use explicit NEXT_PUBLIC_SITE_URL if set (for production override)
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return process.env.NEXT_PUBLIC_SITE_URL;
+  }
+
+  // 2. Use VERCEL_URL for Vercel deployments (auto-set by Vercel)
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+
+  // 3. Fallback to localhost for local development
+  return 'http://localhost:3000';
+};
+
+const baseUrl = getBaseUrl();
+
 export const metadata: Metadata = {
-  title: "SalesAgency.ai - AI-Powered Sales Development Representatives",
+  title: "SalesAgency.ai - AI-Powered Sales Development",
   description: "Scale your outbound sales with autonomous AI SDRs. Personalized outreach across email, LinkedIn, and phone at 90% lower cost than human SDRs.",
-  metadataBase: new URL('https://salesagency.ai'),
+  metadataBase: new URL(baseUrl),
 
   // Favicon and Icons Configuration
   icons: {
@@ -53,13 +71,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://salesagency.ai',
+    url: baseUrl,
     siteName: 'SalesAgency.ai',
     title: 'SalesAgency.ai - AI-Powered Sales Development',
     description: 'Scale your outbound sales with autonomous AI SDRs. Personalized outreach across email, LinkedIn, and phone at 90% lower cost than human SDRs.',
     images: [
       {
-        url: '/og_image.jpg',
+        url: '/og_image.jpg', // Relative URL - automatically uses metadataBase
         width: 1200,
         height: 630,
         alt: 'SalesAgency.ai - AI-Powered Sales Development Platform',
@@ -72,7 +90,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'SalesAgency.ai - AI-Powered Sales Development',
     description: 'Scale your outbound sales with autonomous AI SDRs. Personalized outreach across email, LinkedIn, and phone at 90% lower cost than human SDRs.',
-    images: ['/og_image.jpg'],
+    images: ['/og_image.jpg'], // Relative URL - automatically uses metadataBase
     creator: '@salesagencyceo',
   },
 };
