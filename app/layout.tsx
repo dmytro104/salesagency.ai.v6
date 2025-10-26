@@ -59,10 +59,10 @@ export const metadata: Metadata = {
     description: 'Scale your outbound sales with autonomous AI SDRs. Personalized outreach across email, LinkedIn, and phone at 90% lower cost than human SDRs.',
     images: [
       {
-        url: '/android-chrome-512x512.png',
-        width: 512,
-        height: 512,
-        alt: 'SalesAgency.ai Logo',
+        url: '/og_image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'SalesAgency.ai - AI-Powered Sales Development Platform',
       }
     ],
   },
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'SalesAgency.ai - AI-Powered Sales Development',
     description: 'Scale your outbound sales with autonomous AI SDRs. Personalized outreach across email, LinkedIn, and phone at 90% lower cost than human SDRs.',
-    images: ['/android-chrome-512x512.png'],
+    images: ['/og_image.jpg'],
     creator: '@salesagencyceo',
   },
 };
