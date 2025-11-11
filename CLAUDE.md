@@ -8,11 +8,12 @@ SalesAgency.ai - A marketing website for an AI-powered sales development platfor
 
 ## Tech Stack
 
-- **Framework**: Next.js 16.0.0 (App Router, React Server Components, Turbopack)
+- **Framework**: Next.js 16.0.1 (App Router, React Server Components, Turbopack)
 - **React**: 19.2.0
 - **Styling**: Tailwind CSS 4 with OKLCH color space
-- **UI Components**: shadcn/ui (New York style) + Kibo UI registry
-- **Icons**: Lucide React
+- **UI Components**: shadcn/ui (New York style) + Kibo UI + Aceternity UI registries
+- **Icons**: Phosphor Icons + Lucide React
+- **Animation**: Motion (Framer Motion)
 - **Theming**: next-themes with light/dark mode support
 - **TypeScript**: Strict mode enabled
 
@@ -48,6 +49,11 @@ The project uses a dual-component registry system:
    - Registry URL: https://www.kibo-ui.com/r/{name}.json
    - Add new components: `npx shadcn@latest add @kibo-ui/<component-name>`
 
+3. **Aceternity UI components**
+   - Modern UI components and effects
+   - Registry URL: https://ui.aceternity.com/r/{name}.json
+   - Add new components: `npx shadcn@latest add @aceternity/<component-name>`
+
 ### Theme System
 
 **Theme Provider** (`components/theme-provider.tsx`):
@@ -59,7 +65,14 @@ The project uses a dual-component registry system:
 - Primary brand color: `#8A30EF` (purple) - oklch(60% 0.25 290)
 - Uses OKLCH color space for perceptually uniform colors
 - Tailwind 4 `@theme` directive for CSS variable definitions
-- Dark mode handled via `@media (prefers-color-scheme: dark)`
+- Dark mode handled via `.dark` class selector
+- 8px baseline grid spacing system for visual consistency
+
+**Special Effects** (`app/globals.css`):
+- Gradient mesh backgrounds (`.gradient-mesh`)
+- Glassmorphism effects (`.glass`)
+- Card elevation system (`.card-elevated`)
+- Icon float animations (`.icon-float`)
 
 ### Path Aliases
 
@@ -77,9 +90,15 @@ import { cn } from "@/lib/utils";
 ## Design System Principles
 
 **Brand Colors**:
-- Primary: Purple (#8A30EF)
+- Primary: Purple (#8A30EF / oklch(60% 0.25 290))
 - Use `text-primary`, `bg-primary`, `border-primary` utilities
-- Custom gradients: `.gradient-purple`, `.gradient-purple-radial`
+- Special effects: `.gradient-mesh`, `.glass`, `.card-elevated`
+
+**Spacing System**:
+- 8px baseline grid for all spacing (gap-4, gap-8, gap-16, etc.)
+- Hero sections: py-24 sm:py-32 lg:py-40
+- Regular sections: py-16 sm:py-24
+- Separators: my-16 sm:my-24
 
 **Component Conventions**:
 - Follow shadcn/ui patterns (composition, variants, className merging)
@@ -121,6 +140,11 @@ npx shadcn@latest add <component-name>
 npx shadcn@latest add @kibo-ui/<component-name>
 ```
 
+**From Aceternity UI**:
+```bash
+npx shadcn@latest add @aceternity/<component-name>
+```
+
 Components are automatically added to the correct directory based on their registry.
 
 ## Styling Guidelines
@@ -138,3 +162,19 @@ Components are automatically added to the correct directory based on their regis
 - Tailwind CSS 4 uses `@theme` instead of traditional config files
 - Color system uses OKLCH for better perceptual uniformity
 - Theme switching is client-side only (ThemeProvider needs `"use client"`)
+- Dark mode removes borders on accordions and badges for cleaner appearance
+
+## Remote Image Domains
+
+Allowed domains in `next.config.ts`:
+- `images.unsplash.com` - Stock images
+- `api.dicebear.com` - Avatar generation
+- `shadcnblocks.com` - Component examples
+
+## Metadata & SEO
+
+- Dynamic base URL configuration (`getBaseUrl()` in `app/layout.tsx`)
+- Supports Vercel auto-deployment URLs and local development
+- Comprehensive Open Graph and Twitter Card metadata
+- PWA-ready with manifest and icon configuration
+- Favicon system: `favicon.ico`, `icon.svg`, `apple-icon.png`
