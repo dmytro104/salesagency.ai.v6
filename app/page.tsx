@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect } from "react";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import ServicesSection from "@/components/services-section";
@@ -8,39 +5,25 @@ import CaseStudy from "@/components/case-study";
 import CtaSection from "@/components/cta-section";
 import Footer from "@/components/footer";
 import Founder from "@/components/founder";
+import ScrollRestoration from "@/components/scroll-restoration";
 
+/**
+ * Home Page - Server Component
+ *
+ * This is a Server Component (no "use client" directive) for optimal SEO:
+ * - Search engines receive fully-rendered HTML
+ * - Faster First Contentful Paint (FCP)
+ * - Better Largest Contentful Paint (LCP)
+ * - Improved Core Web Vitals scores
+ *
+ * Client-side interactivity is handled by child components where needed.
+ */
 export default function Home() {
-  useEffect(() => {
-    // Disable automatic scroll restoration to prevent jumping on page refresh
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
-
-    // Restore scroll position after lazy components finish loading
-    // Using a small delay to allow DOM to fully render
-    const timer = setTimeout(() => {
-      const savedScrollPos = sessionStorage.getItem("scrollPos");
-      if (savedScrollPos) {
-        window.scrollTo(0, parseInt(savedScrollPos, 10));
-        sessionStorage.removeItem("scrollPos");
-      }
-    }, 150);
-
-    // Save scroll position before page unload/navigation
-    const handleBeforeUnload = () => {
-      sessionStorage.setItem("scrollPos", window.scrollY.toString());
-    };
-
-    window.addEventListener("beforeunload", handleBeforeUnload);
-
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-  }, []);
-
   return (
     <div className="min-h-screen">
+      {/* Scroll restoration - client component for browser APIs */}
+      <ScrollRestoration />
+
       {/* Navigation */}
       <Navbar />
 
@@ -49,20 +32,20 @@ export default function Home() {
         {/* Hero Section */}
         <Hero />
 
-      {/* Services Section */}
-      <ServicesSection />
+        {/* Services Section */}
+        <ServicesSection />
 
-      {/* Case Study Section */}
-      <CaseStudy />
+        {/* Case Study Section */}
+        <CaseStudy />
 
-      {/* Founder Section */}
-      <Founder />
+        {/* Founder Section */}
+        <Founder />
 
-      {/* CTA Section */}
-      <CtaSection />
+        {/* CTA Section */}
+        <CtaSection />
 
-      {/* Footer */}
-      <Footer />
+        {/* Footer */}
+        <Footer />
       </div>
     </div>
   );
