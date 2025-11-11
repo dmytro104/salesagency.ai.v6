@@ -148,3 +148,40 @@
 .dark [data-slot="badge"][data-variant="outline"] {
   border-color: transparent;
 }
+
+/* Accessibility & Performance Optimizations - Phase 3 */
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .animate-gradient,
+  .icon-float:hover,
+  .card-elevated:hover {
+    animation: none !important;
+  }
+}
+
+/* Optimize backdrop-filter for low-end devices */
+@media (max-width: 768px) {
+  .glass {
+    backdrop-filter: blur(6px);
+  }
+
+  .animate-gradient {
+    animation: gradient-shift 12s ease-in-out infinite;
+  }
+}
+
+/* Ultra-low-end device optimizations (prefers-reduced-data) */
+@supports (font-display: swap) {
+  body {
+    font-display: swap;
+  }
+}

@@ -113,6 +113,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* DNS prefetch for external image domains */}
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://api.dicebear.com" />
+        <link rel="dns-prefetch" href="https://shadcnblocks.com" />
+
+        {/* Preconnect to CDNs for faster asset loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+        {/* Performance optimization: enable compression and caching hints */}
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
       >

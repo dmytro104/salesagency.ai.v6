@@ -13,16 +13,26 @@ function MousePosition(): MousePosition {
     x: 0,
     y: 0,
   });
+  const throttleTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
+    // Throttle mouse move events to 16ms (60fps) to reduce state updates
     const handleMouseMove = (event: MouseEvent) => {
+      if (throttleTimeoutRef.current) return;
+
       setMousePosition({ x: event.clientX, y: event.clientY });
+      throttleTimeoutRef.current = setTimeout(() => {
+        throttleTimeoutRef.current = null;
+      }, 16);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      if (throttleTimeoutRef.current) {
+        clearTimeout(throttleTimeoutRef.current);
+      }
     };
   }, []);
 
@@ -221,7 +231,24 @@ const Particles: React.FC<ParticlesProps> = ({
     return remapped > 0 ? remapped : 0;
   };
 
+  // Target frame rate: 30fps for better performance on low-end devices
+  // (33ms per frame = 1000ms / 30fps)
+  const animateRef = useRef<number>(0);
+  const lastFrameTimeRef = useRef<number>(0);
+  const TARGET_FRAME_TIME = 33; // 30 fps for better performance
+
   const animate = () => {
+    const now = performance.now();
+    const deltaTime = now - lastFrameTimeRef.current;
+
+    // Skip frame if not enough time has passed
+    if (deltaTime < TARGET_FRAME_TIME) {
+      animateRef.current = window.requestAnimationFrame(animate);
+      return;
+    }
+
+    lastFrameTimeRef.current = now;
+
     clearContext();
     circles.current.forEach((circle: Circle, i: number) => {
       // Handle the alpha value
@@ -269,7 +296,7 @@ const Particles: React.FC<ParticlesProps> = ({
         // update the circle position
       }
     });
-    window.requestAnimationFrame(animate);
+    animateRef.current = window.requestAnimationFrame(animate);
   };
 
   return (

@@ -203,8 +203,21 @@ export function DottedGlowBackground({
 
     regenDots();
 
+    // Target frame rate: 24fps for smooth animation on low-end devices
+    // (41ms per frame = 1000ms / 24fps)
+    let lastDrawTime = 0;
+    const TARGET_FRAME_TIME = 41; // 24 fps for smooth performance
+
     const draw = (now: number) => {
       if (stopped) return;
+
+      // Frame rate limiting: skip frame if not enough time has passed
+      if (now - lastDrawTime < TARGET_FRAME_TIME) {
+        raf = requestAnimationFrame(draw);
+        return;
+      }
+      lastDrawTime = now;
+
       const { width, height } = container.getBoundingClientRect();
 
       ctx.clearRect(0, 0, el.width, el.height);
