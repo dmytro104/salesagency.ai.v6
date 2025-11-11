@@ -22,7 +22,7 @@ const buildingBlocks: FeatureItem[] = [
     id: 2,
     title: "Elite Team Building",
     description:
-      "We hired Closer-level talent for Setter positions and Demigod-level talent for Closer positions by properly aligning incentives and expectations. Our rigorous 30-day bootcamp perfects mindset, skillset, and product knowledge—creating top 1% performers who consistently close deals.",
+      "We hired Closer-level talent for Setter positions and Demigod-level talent for Closer positions by properly aligning incentives and expectations. Our rigorous 30-day bootcamp perfects mindset, skillset, and product knowledge - creating top 1% performers who consistently close deals.",
     icon: Users,
   },
   {
@@ -59,16 +59,16 @@ const CaseStudy = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-12">
+        <div className="max-w-3xl mx-auto">
           {/* Building Blocks Section */}
           <div>
-            <div className="text-center mb-6">
+            {/* <div className="text-center mb-6">
               <Badge variant="outline" className="p-2 px-4 bg-card border-border/50 text-sm">
                 Building Blocks
               </Badge>
-            </div>
+            </div> */}
 
-            <div className="bg-muted/20 border border-border/10 rounded-3xl p-6 sm:p-8">
+            <div className="border border-border/10 rounded-3xl p-6 sm:p-8">
               <div className="space-y-4">
                 {buildingBlocks.map((block) => {
                   const Icon = block.icon;
@@ -82,7 +82,7 @@ const CaseStudy = () => {
                         <Icon className="h-6 w-6 text-primary dark:text-primary" />
                       </div>
 
-                      <h3 className="text-xl font-bold text-foreground mb-3 pr-10">
+                      <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 pr-10">
                         {block.title}
                       </h3>
                       <p className="text-base text-muted-foreground leading-relaxed">
@@ -100,17 +100,17 @@ const CaseStudy = () => {
             <div className="absolute inset-x-0 border-t border-dashed border-primary/20" />
             <div className="relative bg-background px-6 py-2 rounded-full border border-primary/30 text-sm font-medium flex items-center gap-2">
               <ArrowDown className="h-4 w-4 text-primary" />
-              <span>Combines Into</span>
+              <span>Complete Solution</span>
             </div>
           </div>
 
           {/* Complete Solution Section */}
           <div>
-            <div className="text-center mb-6">
+            {/* <div className="text-center mb-6">
               <Badge variant="outline" className="p-2 px-4 bg-primary/10 dark:bg-primary/30 border-primary/30 text-sm">
                 Complete Solution
               </Badge>
-            </div>
+            </div> */}
 
             <div className="relative border-2 border-primary/30 hover:border-primary/60 transition-colors duration-300 rounded-3xl p-8 bg-card">
               {/* Large prominent icon in top-right */}

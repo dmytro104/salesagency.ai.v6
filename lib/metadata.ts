@@ -18,14 +18,13 @@ import type { Metadata } from "next";
  * ```
  */
 
-// Get dynamic base URL (same logic as layout.tsx)
+// Get base URL for the application
 export const getBaseUrl = (): string => {
-  if (process.env.NEXT_PUBLIC_SITE_URL) {
-    return process.env.NEXT_PUBLIC_SITE_URL;
+  // Production domain
+  if (process.env.NODE_ENV === "production") {
+    return "https://www.salesagency.ai";
   }
-  if (process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL}`;
-  }
+  // Local development
   return "http://localhost:3000";
 };
 
@@ -176,101 +175,99 @@ export function generateArticleMetadata(
  *
  * Organized by category for better SEO targeting:
  * - Brand & Founder: Direct brand recognition and authority
- * - Core Technology: AI and automation features
+ * - Core Value Proposition: AI SDR platform and cost savings
+ * - General Sales Terms: Broad industry keywords
  * - Services: What we provide
- * - Methodology: Unique frameworks and approaches
- * - Target Market: Who we serve
- * - Sales Roles: Specific positions and functions
+ * - Methodology: Unique frameworks (RapidClose, DPL)
+ * - Target Market: High-ticket service businesses
+ * - Technology & Features: Multi-channel automation
  * - Outcomes: Results and benefits
- * - Industry Terms: Competitive and related concepts
  */
 export const siteKeywords = [
   // Brand & Founder (Authority & Brand Recognition)
   "SalesAgency.ai",
-  "Sales Agency",
+  "Sales Agency AI",
   "Mitch Sapoff",
-  "Mitch Sapoff sales",
-  "Mitch Sapoff founder",
+  "Mitch Sapoff sales expert",
 
-  // Core AI Technology (Primary Value Proposition)
+  // Core Value Proposition (AI SDR Platform)
   "AI SDR",
-  "AI sales development",
-  "autonomous sales agents",
-  "AI sales outreach",
-  "sales AI platform",
-  "AI-powered sales",
-  "AI sales automation",
-  "AI sales analytics",
-  "AI sales optimization",
+  "AI sales development representative",
+  "autonomous AI sales agents",
+  "AI-powered SDR",
+  "90% lower cost SDR",
+  "cost-effective AI sales",
+  "AI sales automation platform",
 
-  // Automation & Outreach (Key Features)
-  "outbound sales automation",
+  // General Sales Terms (Broad Appeal)
+  "sales automation",
+  "sales software",
+  "sales platform",
+  "lead generation",
+  "outbound sales",
+  "sales development",
+  "sales tools",
+  "sales pipeline",
+  "appointment setting",
+  "cold outreach",
+  "sales prospecting",
+  "CRM integration",
+
+  // Multi-Channel Automation (Key Technology)
+  "multi-channel sales outreach",
   "LinkedIn automation",
   "email outreach automation",
   "automated sales calls",
-  "sales automation platform",
-  "multi-channel outreach",
-  "automated prospecting",
+  "AI voice calls",
+  "outbound sales automation",
 
-  // Services & Offerings (What We Do)
-  "fractional CRO",
-  "sales system overhaul",
+  // Services & Offerings (What We Provide)
+  "fractional CRO services",
   "sales team buildout",
-  "sales coaching",
-  "sales training",
+  "sales system overhaul",
+  "AI SDR implementation",
+  "sales coaching and training",
   "sales process optimization",
-  "sales team scaling",
-  "sales consulting",
-  "sales playbooks",
-  "sales scripts",
+  "sales team scaling solutions",
 
   // Methodology & Framework (Unique Differentiators)
   "RapidClose method",
-  "RapidClose",
-  "pre-close commitment",
-  "dollar per lead",
+  "RapidClose sales framework",
+  "pre-close commitment strategy",
+  "dollar per lead optimization",
   "DPL optimization",
-  "high-converting sales frameworks",
+  "high-ticket closing methodology",
 
-  // Target Market & Use Cases (Who We Serve)
-  "B2B lead generation",
+  // Target Market (Who We Serve)
   "high-ticket sales",
-  "high-ticket closing",
-  "service-based sales",
-  "online sales teams",
-  "8-figure scaling",
-  "revenue scaling",
-  "startup sales",
+  "service-based business sales",
   "scale to 7 figures",
   "scale to 8 figures",
+  "8-figure revenue scaling",
+  "online sales teams",
 
-  // Sales Roles & Positions (Specific Functions)
-  "sales development representative",
+  // Sales Roles & Functions
   "AI prospecting",
-  "sales closers",
-  "sales setters",
   "SDR automation",
-  "remote sales team",
+  "sales setters",
+  "sales closers",
+  "remote sales team management",
 
   // Outcomes & Results (Benefits & ROI)
-  "personalized outreach",
-  "sales efficiency",
-  "predictable sales",
+  "predictable revenue systems",
   "scalable sales systems",
-  "sales performance",
-  "lead conversion",
-  "revenue growth",
-  "cost-effective sales",
-  "90% lower cost SDR",
+  "sales efficiency optimization",
+  "revenue growth acceleration",
+  "cost-effective sales operations",
+  "lead conversion optimization",
+  "personalized AI outreach",
 
-  // Industry & Competitive Terms (Market Positioning)
-  "sales technology",
-  "salestech platform",
-  "sales enablement",
-  "sales operations",
-  "CRO services",
+  // Industry & Positioning
+  "AI sales enablement",
+  "sales operations automation",
+  "CRO consulting",
   "sales transformation",
-  "AI-backed sales",
+  "AI-backed sales platform",
 ];
 
 /**
@@ -280,46 +277,68 @@ export const siteKeywords = [
 export const keywordCategories = {
   brand: [
     "SalesAgency.ai",
-    "Sales Agency",
+    "Sales Agency AI",
     "Mitch Sapoff",
     "Mitch Sapoff sales expert",
   ],
 
+  general: [
+    "sales automation",
+    "sales software",
+    "sales platform",
+    "lead generation",
+    "outbound sales",
+    "sales development",
+    "sales tools",
+    "sales pipeline",
+  ],
+
+  valueProposition: [
+    "AI SDR platform",
+    "autonomous AI sales agents",
+    "90% lower cost SDR",
+    "cost-effective AI sales",
+    "AI sales automation platform",
+  ],
+
   technology: [
-    "AI SDR",
-    "AI sales automation",
-    "autonomous sales agents",
-    "AI-powered sales platform",
-    "sales AI technology",
+    "multi-channel sales outreach",
+    "LinkedIn automation",
+    "email outreach automation",
+    "automated sales calls",
+    "AI voice calls",
   ],
 
   services: [
-    "fractional CRO",
+    "fractional CRO services",
+    "sales team buildout",
     "sales system overhaul",
-    "sales team training",
-    "sales coaching services",
-    "sales consulting",
+    "AI SDR implementation",
+    "sales coaching and training",
   ],
 
   methodology: [
     "RapidClose method",
-    "pre-close commitment",
+    "RapidClose sales framework",
+    "pre-close commitment strategy",
     "dollar per lead optimization",
-    "high-converting sales process",
+    "high-ticket closing methodology",
   ],
 
   targetMarket: [
-    "high-ticket sales automation",
-    "B2B sales platform",
+    "high-ticket sales",
     "service-based business sales",
-    "8-figure scaling",
+    "scale to 7 figures",
+    "scale to 8 figures",
+    "8-figure revenue scaling",
   ],
 
   outcomes: [
-    "predictable revenue",
-    "scalable sales",
-    "90% cost reduction",
-    "10x sales efficiency",
+    "predictable revenue systems",
+    "scalable sales systems",
+    "sales efficiency optimization",
+    "revenue growth acceleration",
+    "cost-effective sales operations",
   ],
 };
 

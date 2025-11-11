@@ -25,7 +25,7 @@ const services = [
   {
     title: "AI Performance Optimization",
     description:
-      "Dollar-level tracking that minimizes human error. AI call audits reveal sentiment and objections—fixing issues before they cost you.",
+      "Dollar-level tracking that minimizes human error. AI call audits reveal sentiment and objections - fixing issues before they cost you.",
     icon: ChartBar,
   },
   {
@@ -79,7 +79,7 @@ const ServicesSection = () => {
                   <div className="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300">
                     <Icon className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                     {service.title}
                   </h3>
                 </div>
