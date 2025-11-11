@@ -40,7 +40,6 @@ public/          → Static assets, robots.txt, sitemap
 
 ## Key Features
 
-- Multi-channel automation (LinkedIn, Email, Phone/Voice)
 - RapidClose methodology framework
 - Dollar-per-lead (DPL) optimization
 - Fractional CRO services
