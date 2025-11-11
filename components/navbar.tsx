@@ -2,7 +2,7 @@ import { Button as MovingBorderButton } from "@/components/ui/moving-border";
 import { Logo } from "./logo";
 import { IntegratedThemeSwitcher } from "@/components/integrated-theme-switcher";
 
-const Navbar01 = () => {
+const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border/10">
       <div className="h-20 flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,4 +37,4 @@ const Navbar01 = () => {
   );
 };
 
-export default Navbar01;
+export default Navbar;

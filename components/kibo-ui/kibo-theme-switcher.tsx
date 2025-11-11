@@ -1,10 +1,10 @@
 "use client";
 
 import { useControllableState } from "@radix-ui/react-use-controllable-state";
-import { Monitor, Moon, Sun } from "lucide-react";
+import { Monitor, Moon, Sun } from "@phosphor-icons/react";
 import { useCallback } from "react";
 import { cn } from "@/lib/utils";
-import "./theme-switcher.css";
+import "./kibo-theme-switcher.css";
 
 const themes = [
   {
