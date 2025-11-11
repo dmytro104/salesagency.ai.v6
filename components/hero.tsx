@@ -48,7 +48,7 @@ const Hero = () => {
           </Badge>
           <Badge variant="outline" className="rounded-full bg-primary/10 backdrop-blur-sm px-4 py-2 border-primary/30 text-sm font-medium flex items-center">
             <Trophy style={{ width: 16, height: 16 }} className="mr-2 text-primary" />
-            Hundreds of Happy Sales Managers
+            100s of Happy Sales Managers
           </Badge>
         </div>
       </div>
