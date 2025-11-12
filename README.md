@@ -1,6 +1,6 @@
 # SalesAgency.ai
 
-Marketing website for an AI-powered sales development platform. Build autonomous AI SDRs for outbound sales at 90% lower cost than human sales development representatives.
+Marketing website for a Scalable Sales Systems platform. Build autonomous AI SDRs for outbound sales at 90% lower cost than human sales development representatives.
 
 ## Quick Start
 

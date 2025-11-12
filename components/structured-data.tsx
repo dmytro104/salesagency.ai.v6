@@ -29,7 +29,7 @@ export default function StructuredData({ baseUrl }: StructuredDataProps) {
     url: baseUrl,
     logo: `${baseUrl}/icon.svg`,
     description:
-      "AI-powered sales development platform that scales outbound sales with autonomous AI SDRs. Founded by Mitch Sapoff, we provide fractional CRO services, sales system overhaul, and the RapidClose™ Method for high-ticket sales teams.",
+      "Scalable Sales Systems platform that scales outbound sales with autonomous AI SDRs. Founded by Mitch Sapoff, we provide fractional CRO services, sales system overhaul, and the RapidClose™ Method for high-ticket sales teams.",
     foundingDate: "2021",
     founder: {
       "@type": "Person",

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-SalesAgency.ai - A marketing website for an AI-powered sales development platform. Built with Next.js 16, React 19, and Tailwind CSS 4.
+SalesAgency.ai - A marketing website for a Scalable Sales Systems platform. Built with Next.js 16, React 19, and Tailwind CSS 4.
 
 ## Tech Stack
 

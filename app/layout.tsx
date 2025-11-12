@@ -34,7 +34,7 @@ const getBaseUrl = () => {
 const baseUrl = getBaseUrl();
 
 export const metadata: Metadata = {
-  title: "SalesAgency.ai - AI-Powered Sales Development",
+  title: "SalesAgency.ai - Scalable Sales Systems",
   description: "Scale your outbound sales with autonomous AI SDRs. Personalized outreach across email, LinkedIn, and phone at 90% lower cost than human SDRs.",
   metadataBase: new URL(baseUrl),
 
@@ -166,7 +166,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: baseUrl,
     siteName: "SalesAgency.ai",
-    title: "SalesAgency.ai - AI-Powered Sales Development",
+    title: "SalesAgency.ai - Scalable Sales Systems",
     description:
       "Scale your outbound sales with autonomous AI SDRs. Personalized outreach across email, LinkedIn, and phone at 90% lower cost than human SDRs.",
     images: [
@@ -174,7 +174,7 @@ export const metadata: Metadata = {
         url: "/og_image.jpg", // Relative URL - automatically uses metadataBase
         width: 1200,
         height: 630,
-        alt: "SalesAgency.ai - AI-Powered Sales Development Platform",
+        alt: "SalesAgency.ai - Scalable Sales Systems Platform",
       },
     ],
   },
@@ -182,7 +182,7 @@ export const metadata: Metadata = {
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "SalesAgency.ai - AI-Powered Sales Development",
+    title: "SalesAgency.ai - Scalable Sales Systems",
     description:
       "Scale your outbound sales with autonomous AI SDRs. Personalized outreach across email, LinkedIn, and phone at 90% lower cost than human SDRs.",
     images: ["/og_image.jpg"], // Relative URL - automatically uses metadataBase
