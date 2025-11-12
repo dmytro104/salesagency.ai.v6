@@ -1,0 +1,28 @@
+# robots.txt for SalesAgency.ai
+# SEO optimization for Next.js 16
+
+# Allow all crawlers to access all content
+User-agent: *
+Allow: /
+
+# Sitemap location (automatically generated)
+Sitemap: https://salesagency.ai/sitemap.xml
+
+# Common bot-specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block access to Next.js internal files (if they exist in public)
+User-agent: *
+Disallow: /*.json$
+Disallow: /api/
+Disallow: /_next/static/
+
+# Crawl delay (optional, usually not needed for modern sites)
+# Crawl-delay: 1

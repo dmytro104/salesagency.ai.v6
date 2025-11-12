@@ -1,0 +1,25 @@
+{
+    "name": "SalesAgency.ai - AI-Powered Sales Development",
+    "short_name": "SalesAgency.ai",
+    "description": "Scale your outbound sales with autonomous AI SDRs. Personalized outreach across email, LinkedIn, and phone at 90% lower cost than human SDRs.",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#8A30EF",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/",
+    "orientation": "portrait-primary"
+}
