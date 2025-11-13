@@ -12,6 +12,9 @@ import type { MetadataRoute } from "next";
  * - lastModified: helps search engines know when to recrawl
  */
 
+// Required for static export
+export const dynamic = "force-static";
+
 // Dynamic base URL - matches layout.tsx logic
 const getBaseUrl = () => {
   if (process.env.NEXT_PUBLIC_SITE_URL) {
@@ -20,7 +23,7 @@ const getBaseUrl = () => {
   if (process.env.VERCEL_URL) {
     return `https://${process.env.VERCEL_URL}`;
   }
-  return "http://localhost:3000";
+  return "https://www.salesagency.ai";
 };
 
 const baseUrl = getBaseUrl();
