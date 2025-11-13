@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-background">
+    <footer className="relative bg-primary/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
@@ -38,7 +38,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-3">Contact</h3>
             <div className="space-y-2 text-muted-foreground">
               <p>
-                <a href="mailto:mitch@salesagency.ai" className="hover:text-foreground transition-colors">
+                <a href="mailto:mitch@salesagency.ai" className="hover:text-foreground">
                   mitch@salesagency.ai
                 </a>
               </p>

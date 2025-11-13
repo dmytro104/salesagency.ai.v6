@@ -26,7 +26,7 @@ const Hero = () => {
         <div className="mt-10 flex items-center justify-center">
           <Button
             size="lg"
-            className="rounded-xl text-base sm:text-lg h-11 sm:h-12 px-10 sm:px-12 font-semibold shadow-lg hover:shadow-xl transition-all whitespace-nowrap"
+            className="rounded-xl text-base sm:text-lg h-11 sm:h-12 px-10 sm:px-12 font-semibold shadow-lg hover:shadow-xl whitespace-nowrap"
             asChild
           >
             <a href="https://api.salesagency.ai/widget/bookings/salesagencyai-discovery" target="_blank" rel="noopener noreferrer" className="flex items-center">

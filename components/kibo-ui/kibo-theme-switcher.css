@@ -1,10 +1,6 @@
 /* Theme switcher styles that react to html theme class */
 /* This prevents flash because CSS is applied before React hydrates */
 
-.theme-switcher-button[data-theme-key] {
-  transition: background-color 200ms;
-}
-
 .theme-switcher-button[data-theme-key] .theme-switcher-bg {
   opacity: 0;
   background-color: hsl(var(--secondary));
@@ -13,7 +9,6 @@
 .theme-switcher-button[data-theme-key] .theme-switcher-icon {
   color: hsl(var(--foreground));
   opacity: 0.3;
-  transition: opacity 200ms;
 }
 
 /* Light mode active */

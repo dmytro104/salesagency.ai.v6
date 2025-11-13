@@ -38,7 +38,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+    <section id="services" className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 ">
       <div className="text-center mb-16 space-y-4">
         <Badge variant="outline" className="bg-primary/10 dark:bg-primary/30 backdrop-blur-sm border-primary/30 text-sm">How It Works</Badge>
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
@@ -55,7 +55,7 @@ const ServicesSection = () => {
           return (
             <div
               key={i}
-              className="group relative bg-card border border-border rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:border-primary/50 hover:-translate-y-1 overflow-hidden"
+              className="group relative bg-card border border-border rounded-2xl p-8 overflow-hidden"
             >
               {/* Dot grid pattern background */}
               <div
@@ -66,20 +66,15 @@ const ServicesSection = () => {
                 }}
               />
 
-              {/* Gradient orb decoration */}
-              <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-              {/* Gradient accent on hover */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/8 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               {/* Content */}
               <div className="relative space-y-4">
                 {/* Icon + Title Row */}
                 <div className="flex items-center gap-4">
-                  <div className="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300">
-                    <Icon className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary">
+                    <Icon className="h-6 w-6" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground">
                     {service.title}
                   </h3>
                 </div>

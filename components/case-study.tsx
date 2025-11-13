@@ -75,7 +75,7 @@ const CaseStudy = () => {
                   return (
                     <div
                       key={block.id}
-                      className="relative bg-card border border-border rounded-xl p-6 transition-colors duration-300 hover:border-primary/30"
+                      className="relative bg-card border border-border rounded-xl p-6"
                     >
                       {/* Large prominent icon in top-right */}
                       <div className="absolute -top-2 -right-2 w-12 h-12 rounded-xl bg-[#EFE9FB] dark:bg-[#1B1628] flex items-center justify-center shadow-lg">
@@ -112,7 +112,7 @@ const CaseStudy = () => {
               </Badge>
             </div> */}
 
-            <div className="relative border-2 border-primary/30 hover:border-primary/60 transition-colors duration-300 rounded-3xl p-8 bg-card">
+            <div className="relative border-2 border-primary/30 rounded-3xl p-8 bg-card">
               {/* Large prominent icon in top-right */}
               <div className="absolute -top-3 -right-3 w-14 h-14 rounded-xl bg-[#EFE9FB] dark:bg-[#1B1628] flex items-center justify-center shadow-lg">
                 <Trophy className="h-7 w-7 text-primary dark:text-primary" />

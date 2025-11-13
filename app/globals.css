@@ -93,15 +93,6 @@
     radial-gradient(at 10% 29%, oklch(65% 0.25 290 / 0.05) 0px, transparent 50%);
 }
 
-@keyframes gradient-shift {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.8; }
-}
-
-.animate-gradient {
-  animation: gradient-shift 8s ease-in-out infinite;
-}
-
 /* Glassmorphism Effects - Phase 13 */
 .glass {
   background: rgba(255, 255, 255, 0.05);
@@ -119,24 +110,12 @@
   box-shadow:
     0 1px 2px 0 rgb(0 0 0 / 0.05),
     0 0 0 1px rgb(0 0 0 / 0.05);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-elevated:hover {
   box-shadow:
     0 10px 15px -3px rgb(0 0 0 / 0.1),
     0 4px 6px -4px rgb(0 0 0 / 0.1);
-  transform: translateY(-2px);
-}
-
-/* Icon Float Animation - Phase 14 */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
-.icon-float:hover {
-  animation: float 2s ease-in-out infinite;
 }
 
 /* Remove borders in dark mode */
@@ -151,7 +130,7 @@
 
 /* Accessibility & Performance Optimizations - Phase 3 */
 
-/* Disable animations for users who prefer reduced motion */
+/* Disable transitions for users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -160,22 +139,12 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-
-  .animate-gradient,
-  .icon-float:hover,
-  .card-elevated:hover {
-    animation: none !important;
-  }
 }
 
 /* Optimize backdrop-filter for low-end devices */
 @media (max-width: 768px) {
   .glass {
     backdrop-filter: blur(6px);
-  }
-
-  .animate-gradient {
-    animation: gradient-shift 12s ease-in-out infinite;
   }
 }
 
