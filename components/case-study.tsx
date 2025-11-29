@@ -20,16 +20,16 @@ const buildingBlocks: FeatureItem[] = [
   },
   {
     id: 2,
-    title: "Elite Team Building",
+    title: "Assembling the Dream Team",
     description:
-      "We hired Closer-level talent for Setter positions and Demigod-level talent for Closer positions by properly aligning incentives and expectations. Our rigorous 30-day bootcamp perfects mindset, skillset, and product knowledge - creating top 1% performers who consistently close deals.",
+      "By properly aligning incentives and expectations, we were able to acquire top 10% talent and mold them into top 1% performers via our Bootcamp.",
     icon: Users,
   },
   {
     id: 3,
     title: "AI-Powered Optimization",
     description:
-      "Using AI and advanced analytics, we pinpoint exactly where scripts, funnels, or reps need adjustment. Our tech-driven feedback loops catch and fix issues before they become expensive, enabling rapid iteration and continuous improvement at scale.",
+      "Using AI and advanced analytics, we pinpointed exactly where scripts, funnels, or reps needed adjustment. Our tech-driven feedback loops caught and fixed issues before they became expensive, enabling rapid iteration and continuous improvement at scale.",
     icon: Sparkle,
   },
 ];
@@ -44,18 +44,18 @@ const resultFeature: FeatureItem = {
 
 const CaseStudy = () => {
   return (
-    <section id="case-study" className="py-24 sm:py-32">
+    <section id="case-study" className="section-transition bg-muted/50 py-24 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Header */}
         <div className="text-center mb-16 space-y-4">
-          <Badge variant="outline" className="bg-primary/10 dark:bg-primary/30 backdrop-blur-sm border-primary/30 text-sm">
-            Proven Results
+          <Badge variant="highlight">
+            Case Study
           </Badge>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
-            $0 to $1M/Month in 9 Months
+            $50k to $1M/Month in 9 Months
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            The exact system we used to scale a high-ticket sales team.
+            The exact system we used to scale a Done-For-You service.
           </p>
         </div>
 
@@ -75,11 +75,11 @@ const CaseStudy = () => {
                   return (
                     <div
                       key={block.id}
-                      className="relative bg-card border border-border rounded-xl p-6"
+                      className="relative bg-card border border-border rounded-xl p-6 card-interactive hover:border-primary/30"
                     >
                       {/* Large prominent icon in top-right */}
-                      <div className="absolute -top-2 -right-2 w-12 h-12 rounded-xl bg-[#EFE9FB] dark:bg-[#1B1628] flex items-center justify-center shadow-lg">
-                        <Icon className="h-6 w-6 text-primary dark:text-primary" />
+                      <div className="absolute -top-2 -right-2 w-12 h-12 rounded-xl bg-[#EFE9FB] dark:bg-[#1B1628] flex items-center justify-center shadow-lg icon-glow">
+                        <Icon className="h-6 w-6 text-primary" />
                       </div>
 
                       <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 pr-10">
@@ -99,8 +99,8 @@ const CaseStudy = () => {
           <div className="relative flex items-center justify-center my-12">
             <div className="absolute inset-x-0 border-t border-dashed border-primary/20" />
             <div className="relative bg-background px-6 py-2 rounded-full border border-primary/30 text-sm font-medium flex items-center gap-2">
-              <ArrowDown className="h-4 w-4 text-primary" />
-              <span>Complete Solution</span>
+              <ArrowDown className="h-6 w-6 text-primary" />
+              {/* <span>Complete Solution</span> */}
             </div>
           </div>
 
@@ -112,10 +112,10 @@ const CaseStudy = () => {
               </Badge>
             </div> */}
 
-            <div className="relative border-2 border-primary/30 rounded-3xl p-8 bg-card">
+            <div className="relative border-2 border-primary/30 rounded-3xl p-8 bg-card card-interactive">
               {/* Large prominent icon in top-right */}
-              <div className="absolute -top-3 -right-3 w-14 h-14 rounded-xl bg-[#EFE9FB] dark:bg-[#1B1628] flex items-center justify-center shadow-lg">
-                <Trophy className="h-7 w-7 text-primary dark:text-primary" />
+              <div className="absolute -top-3 -right-3 w-14 h-14 rounded-xl bg-[#EFE9FB] dark:bg-[#1B1628] flex items-center justify-center shadow-lg icon-glow">
+                <Trophy className="h-7 w-7 text-primary" />
               </div>
 
               <h3 className="text-2xl font-bold text-foreground mb-4 pr-12">

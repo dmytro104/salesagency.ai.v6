@@ -25,7 +25,7 @@ const services = [
   {
     title: "AI Performance Optimization",
     description:
-      "Dollar-level tracking that minimizes human error. AI call audits reveal sentiment and objections - fixing issues before they cost you.",
+      "Our AI stack empowers your reps to sell smarter, and your managers to lead gracefully.",
     icon: ChartBar,
   },
   {
@@ -38,9 +38,10 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 ">
+    <section id="services" className="section-transition bg-muted/50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
       <div className="text-center mb-16 space-y-4">
-        <Badge variant="outline" className="bg-primary/10 dark:bg-primary/30 backdrop-blur-sm border-primary/30 text-sm">How It Works</Badge>
+        <Badge variant="highlight">Our Services</Badge>
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
           Human Sales Mastery Meets AI Precision
         </h2>
@@ -55,7 +56,7 @@ const ServicesSection = () => {
           return (
             <div
               key={i}
-              className="group relative bg-card border border-border rounded-2xl p-8 overflow-hidden"
+              className="group relative bg-card border border-border rounded-2xl p-8 overflow-hidden card-interactive hover:border-primary/30"
             >
               {/* Dot grid pattern background */}
               <div
@@ -71,7 +72,7 @@ const ServicesSection = () => {
               <div className="relative space-y-4">
                 {/* Icon + Title Row */}
                 <div className="flex items-center gap-4">
-                  <div className="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary">
+                  <div className="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary icon-glow">
                     <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="text-xl md:text-2xl font-bold text-foreground">
@@ -87,6 +88,7 @@ const ServicesSection = () => {
             </div>
           );
         })}
+        </div>
       </div>
     </section>
   );
