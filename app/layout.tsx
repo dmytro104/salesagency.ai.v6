@@ -175,6 +175,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "SalesAgency.ai - Scalable Sales Systems Platform",
+        type: "image/jpeg",
       },
     ],
   },
@@ -187,6 +188,7 @@ export const metadata: Metadata = {
       "Scale your outbound sales with autonomous AI SDRs. Personalized outreach across email, LinkedIn, and phone at 90% lower cost than human SDRs.",
     images: ["/og_image.jpg"], // Relative URL - automatically uses metadataBase
     creator: "@salesagencyceo",
+    site: "@salesagencyceo",
   },
 };
 

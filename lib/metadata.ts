@@ -133,6 +133,7 @@ export function generatePageMetadata(
           width: ogImageWidth,
           height: ogImageHeight,
           alt: title,
+          type: "image/jpeg",
         },
       ],
       ...(publishedTime && { publishedTime }),
@@ -147,6 +148,7 @@ export function generatePageMetadata(
       description,
       images: [ogImage],
       creator: "@salesagencyceo",
+      site: "@salesagencyceo",
     },
   };
 
