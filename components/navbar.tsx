@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Logo } from "./logo";
 import { IntegratedThemeSwitcher } from "@/components/integrated-theme-switcher";
@@ -10,7 +12,7 @@ const Navbar = () => {
           <Logo />
         </div>
 
-        <div className="flex items-center gap-3 my-auto">
+        <div className="flex items-center gap-4 my-auto">
           <div className="hidden md:flex">
             <IntegratedThemeSwitcher />
           </div>
@@ -26,11 +28,6 @@ const Navbar = () => {
               Book Call
             </a>
           </Button>
-
-          {/* Mobile Menu - Commented out for future use */}
-          {/* <div className="sm:hidden flex items-center">
-            <NavigationSheet />
-          </div> */}
         </div>
       </div>
     </nav>

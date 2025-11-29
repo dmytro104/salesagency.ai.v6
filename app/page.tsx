@@ -1,6 +1,7 @@
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import ServicesSection from "@/components/services-section";
+import SolutionsSection from "@/components/solutions-section";
 import CaseStudy from "@/components/case-study";
 import CtaSection from "@/components/cta-section";
 import Footer from "@/components/footer";
@@ -34,6 +35,9 @@ export default function Home() {
 
         {/* Services Section */}
         <ServicesSection />
+
+        {/* Solutions Section */}
+        <SolutionsSection />
 
         {/* Case Study Section */}
         <CaseStudy />

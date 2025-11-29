@@ -35,6 +35,9 @@
   --color-border: oklch(90% 0 0);
   --color-input: oklch(96% 0 0);
   --color-ring: oklch(60% 0.25 290);
+
+  /* Primary surface for icon backgrounds */
+  --color-primary-surface: oklch(95% 0.05 290);
 }
 
 /* Dark mode overrides */
@@ -55,7 +58,7 @@
   --color-secondary-foreground: oklch(98% 0 0);
 
   --color-muted: oklch(18% 0 0);
-  --color-muted-foreground: oklch(60% 0 0);
+  --color-muted-foreground: oklch(70% 0 0);
 
   --color-accent: oklch(18% 0 0);
   --color-accent-foreground: oklch(98% 0 0);
@@ -66,6 +69,9 @@
   --color-border: oklch(24% 0 0);
   --color-input: oklch(18% 0 0);
   --color-ring: oklch(65% 0.25 290);
+
+  /* Primary surface for icon backgrounds */
+  --color-primary-surface: oklch(20% 0.08 290);
 }
 
 /* 8px Baseline Grid Spacing System
@@ -118,9 +124,67 @@
     0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
-/* Remove borders in dark mode */
-.dark [data-slot="accordion-item"],
-.dark .border {
+/* Section Transition - Subtle gradient divider */
+.section-transition {
+  position: relative;
+}
+
+.section-transition::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 1200px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    oklch(60% 0.25 290 / 0.15) 20%,
+    oklch(60% 0.25 290 / 0.25) 50%,
+    oklch(60% 0.25 290 / 0.15) 80%,
+    transparent 100%
+  );
+}
+
+/* Card hover enhancement */
+.card-interactive {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-interactive:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Badge hover effect */
+.badge-interactive {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.badge-interactive:hover {
+  transform: scale(1.02);
+  background-color: oklch(60% 0.25 290 / 0.15);
+}
+
+.dark .badge-interactive:hover {
+  background-color: oklch(65% 0.25 290 / 0.35);
+}
+
+/* Icon glow on hover */
+.icon-glow {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.icon-glow:hover,
+.group:hover .icon-glow {
+  box-shadow: 0 0 20px oklch(60% 0.25 290 / 0.3);
+  transform: scale(1.1);
+}
+
+/* Remove borders in dark mode - specific selectors only */
+.dark [data-slot="accordion-item"] {
   border-color: transparent;
 }
 

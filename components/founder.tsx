@@ -6,10 +6,10 @@ import { CheckCircle } from "@phosphor-icons/react";
 
 const Founder = () => {
   return (
-    <section id="about" className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+    <section id="about" className="section-transition container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12 space-y-4">
-          <Badge variant="outline" className="bg-primary/10 dark:bg-primary/30 backdrop-blur-sm border-primary/30 text-sm">Meet the Founder</Badge>
+          <Badge variant="highlight">Meet the Founder</Badge>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
             Mitch Sapoff
           </h2>
@@ -41,20 +41,20 @@ const Founder = () => {
               </p>
 
               <div className="space-y-2 my-6">
-                <div className="flex items-start gap-3">
-                  <CheckCircle style={{ width: 24, height: 24 }} className="text-primary mt-1 shrink-0" />
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-primary mt-1 shrink-0" />
                   <span>Personally closed $10M+ in sales</span>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle style={{ width: 24, height: 24 }} className="text-primary mt-1 shrink-0" />
-                  <span>Scaled my own infoproduct 30% Month over Month for 12 months straight (2M/year run rate)</span>
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-primary mt-1 shrink-0" />
+                  <span>Scaled my own infoproduct 30% Month over Month for 12 months straight (2M/year run rate with high profit margins)</span>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle style={{ width: 24, height: 24 }} className="text-primary mt-1 shrink-0" />
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-primary mt-1 shrink-0" />
                   <span>Trained 300+ reps who&apos;ve generated $100M+ in sales combined</span>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle style={{ width: 24, height: 24 }} className="text-primary mt-1 shrink-0" />
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-primary mt-1 shrink-0" />
                   <span>Helped 100+ sales teams scale revenue with my reps, scripts, and frameworks</span>
                 </div>
               </div>
