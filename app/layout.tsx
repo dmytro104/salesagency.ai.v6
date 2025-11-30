@@ -212,6 +212,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/*
+          Explicit OG Image meta tags for iOS/WhatsApp crawler precedence.
+          These appear BEFORE any page content to ensure crawlers pick up
+          the correct image instead of scanning page images.
+        */}
+        <meta property="og:image" content={`${baseUrl}/og_image.jpg`} />
+        <meta property="og:image:secure_url" content={`${baseUrl}/og_image.jpg`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:alt" content="SalesAgency.ai - Scalable Sales Systems Platform" />
+        <meta name="twitter:image" content={`${baseUrl}/og_image.jpg`} />
+
         {/* Structured Data (JSON-LD) for SEO */}
         <StructuredData baseUrl={baseUrl} />
 

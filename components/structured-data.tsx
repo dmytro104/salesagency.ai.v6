@@ -37,6 +37,7 @@ export default function StructuredData({ baseUrl }: StructuredDataProps) {
       jobTitle: "Founder & CEO",
       description:
         "Sales expert with $10M+ in personal sales, trained 300+ reps generating $100M+ in combined sales. Creator of the RapidClose™ Method.",
+      image: `${baseUrl}/mitch-sapoff.jpg`,
       url: `${baseUrl}`,
       sameAs: [
         "https://www.facebook.com/mitch.sapoff.3/",

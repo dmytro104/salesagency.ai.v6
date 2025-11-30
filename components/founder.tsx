@@ -27,7 +27,7 @@ const Founder = () => {
                   width={448}
                   height={448}
                   className="scale-100 object-cover w-full h-full"
-                  priority
+                  loading="lazy"
                 />
               </div>
             </div>
