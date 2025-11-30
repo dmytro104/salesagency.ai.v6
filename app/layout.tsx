@@ -15,23 +15,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Dynamic base URL - works for production, Vercel previews, and local dev
-const getBaseUrl = () => {
-  // 1. Use explicit NEXT_PUBLIC_SITE_URL if set (for production override)
-  if (process.env.NEXT_PUBLIC_SITE_URL) {
-    return process.env.NEXT_PUBLIC_SITE_URL;
-  }
+// Production URL for OG images and canonical URLs
+// IMPORTANT: Social crawlers (iOS, WhatsApp, Facebook) require absolute production URLs.
+// Using environment variables can result in localhost URLs being baked into static builds.
+const PRODUCTION_URL = 'https://www.salesagency.ai';
 
-  // 2. Use VERCEL_URL for Vercel deployments (auto-set by Vercel)
-  if (process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL}`;
-  }
-
-  // 3. Fallback to localhost for local development
-  return 'http://localhost:3000';
-};
-
-const baseUrl = getBaseUrl();
+// Use production URL for metadata (OG images, canonical URLs)
+// This ensures social sharing always works regardless of build environment
+const baseUrl = PRODUCTION_URL;
 
 export const metadata: Metadata = {
   title: "SalesAgency.ai - Scalable Sales Systems",
