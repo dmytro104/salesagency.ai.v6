@@ -18,14 +18,15 @@ import type { Metadata } from "next";
  * ```
  */
 
+// Production URL for OG images and canonical URLs
+// IMPORTANT: Social crawlers (iOS, WhatsApp, Facebook) require absolute production URLs.
+// Always use production URL for metadata regardless of environment.
+export const PRODUCTION_URL = "https://www.salesagency.ai";
+
 // Get base URL for the application
+// Always returns production URL for consistent social sharing
 export const getBaseUrl = (): string => {
-  // Production domain
-  if (process.env.NODE_ENV === "production") {
-    return "https://www.salesagency.ai";
-  }
-  // Local development
-  return "http://localhost:3000";
+  return PRODUCTION_URL;
 };
 
 export interface PageMetadataOptions {
