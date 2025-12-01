@@ -75,7 +75,7 @@ const CaseStudy = () => {
                   return (
                     <div
                       key={block.id}
-                      className="relative bg-card border border-border rounded-xl p-6 card-interactive hover:border-primary/30"
+                      className="relative bg-card border border-border rounded-xl p-6 card-interactive hover-hover:border-primary/30"
                     >
                       {/* Large prominent icon in top-right */}
                       <div className="absolute -top-2 -right-2 w-12 h-12 rounded-xl bg-[#EFE9FB] dark:bg-[#1B1628] flex items-center justify-center shadow-lg icon-glow">

@@ -56,13 +56,13 @@ const ServicesSection = () => {
           return (
             <div
               key={i}
-              className="group relative bg-card border border-border rounded-2xl p-8 overflow-hidden card-interactive hover:border-primary/30"
+              className="group relative bg-card border border-border rounded-2xl p-8 overflow-hidden card-interactive hover-hover:border-primary/30"
             >
               {/* Dot grid pattern background */}
               <div
-                className="absolute inset-0 opacity-[0.12] dark:opacity-[0.08]"
+                className="absolute inset-0 opacity-40 dark:opacity-30"
                 style={{
-                  backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)',
+                  backgroundImage: 'radial-gradient(circle, oklch(60% 0.25 290) 1px, transparent 1px)',
                   backgroundSize: '24px 24px'
                 }}
               />

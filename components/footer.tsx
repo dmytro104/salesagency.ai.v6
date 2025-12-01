@@ -38,7 +38,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-3">Contact</h3>
             <div className="space-y-2 text-muted-foreground">
               <p>
-                <a href="mailto:mitch@salesagency.ai" className="hover:text-foreground">
+                <a href="mailto:mitch@salesagency.ai" className="hover-hover:text-foreground">
                   mitch@salesagency.ai
                 </a>
               </p>

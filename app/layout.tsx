@@ -151,7 +151,7 @@ export const metadata: Metadata = {
   // Additional PWA Meta Tags
   applicationName: "SalesAgency.ai",
 
-  // Open Graph
+  // Open Graph - Using absolute URLs for maximum crawler compatibility
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -162,7 +162,8 @@ export const metadata: Metadata = {
       "Scale your outbound sales with autonomous AI SDRs. Personalized outreach across email, LinkedIn, and phone at 90% lower cost than human SDRs.",
     images: [
       {
-        url: "/og_image.jpg", // Relative URL - automatically uses metadataBase
+        url: `${baseUrl}/og_image.jpg`,
+        secureUrl: `${baseUrl}/og_image.jpg`,
         width: 1200,
         height: 630,
         alt: "SalesAgency.ai - Scalable Sales Systems Platform",
@@ -171,13 +172,13 @@ export const metadata: Metadata = {
     ],
   },
 
-  // Twitter Card
+  // Twitter Card - Using absolute URLs for maximum crawler compatibility
   twitter: {
     card: "summary_large_image",
     title: "SalesAgency.ai - Scalable Sales Systems",
     description:
       "Scale your outbound sales with autonomous AI SDRs. Personalized outreach across email, LinkedIn, and phone at 90% lower cost than human SDRs.",
-    images: ["/og_image.jpg"], // Relative URL - automatically uses metadataBase
+    images: [`${baseUrl}/og_image.jpg`],
     creator: "@salesagencyceo",
     site: "@salesagencyceo",
   },
@@ -203,19 +204,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/*
-          Explicit OG Image meta tags for iOS/WhatsApp crawler precedence.
-          These appear BEFORE any page content to ensure crawlers pick up
-          the correct image instead of scanning page images.
-        */}
-        <meta property="og:image" content={`${baseUrl}/og_image.jpg`} />
-        <meta property="og:image:secure_url" content={`${baseUrl}/og_image.jpg`} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:alt" content="SalesAgency.ai - Scalable Sales Systems Platform" />
-        <meta name="twitter:image" content={`${baseUrl}/og_image.jpg`} />
-
         {/* Structured Data (JSON-LD) for SEO */}
         <StructuredData baseUrl={baseUrl} />
 
