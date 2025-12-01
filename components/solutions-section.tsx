@@ -79,14 +79,14 @@ const SolutionsSection = () => {
           return (
             <div
               key={i}
-              className="group relative bg-card border border-border rounded-2xl p-8 overflow-hidden card-interactive hover:border-primary/30"
+              className="group relative bg-card border border-border rounded-2xl p-8 overflow-hidden card-interactive hover-hover:border-primary/30"
             >
               {/* Dot grid pattern background */}
               <div
-                className="absolute inset-0 opacity-[0.12] dark:opacity-[0.08]"
+                className="absolute inset-0 opacity-40 dark:opacity-30"
                 style={{
                   backgroundImage:
-                    "radial-gradient(circle, currentColor 1px, transparent 1px)",
+                    "radial-gradient(circle, oklch(60% 0.25 290) 1px, transparent 1px)",
                   backgroundSize: "24px 24px",
                 }}
               />
@@ -116,13 +116,21 @@ const SolutionsSection = () => {
         <div className="col-span-1 md:col-span-full group relative border-2 border-primary/30 rounded-3xl p-8 bg-card overflow-hidden card-interactive">
           {/* Dot grid pattern background */}
           <div
-            className="absolute inset-0 opacity-[0.12] dark:opacity-[0.08]"
+            className="absolute inset-0 opacity-40 dark:opacity-30"
             style={{
               backgroundImage:
-                "radial-gradient(circle, currentColor 1px, transparent 1px)",
+                "radial-gradient(circle, oklch(60% 0.25 290) 1px, transparent 1px)",
               backgroundSize: "24px 24px",
             }}
           />
+
+          {/* Badge - Top right on mobile, inline on desktop */}
+          <Badge
+            variant="highlight"
+            className="text-xs absolute top-4 right-4 md:hidden z-10"
+          >
+            Flagship Solution
+          </Badge>
 
           {/* Content */}
           <div className="relative">
@@ -138,7 +146,7 @@ const SolutionsSection = () => {
                   <h3 className="text-2xl md:text-3xl font-bold text-foreground">
                     {flagshipSolution.title}
                   </h3>
-                  <Badge variant="highlight" className="text-xs self-center">
+                  <Badge variant="highlight" className="text-xs hidden md:inline-flex">
                     Flagship Solution
                   </Badge>
                 </div>

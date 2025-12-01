@@ -10,10 +10,10 @@ export const BackgroundPattern = () => {
       height={20}
       cx={1}
       cy={1}
-      cr={1.5}
+      cr={2}
       className={cn(
         "mask-[radial-gradient(ellipse,rgba(0,0,0,0.3)_30%,black_50%)]",
-        "dark:fill-slate-700"
+        "fill-primary/40 dark:fill-primary/30"
       )}
     />
   );
