@@ -65,7 +65,7 @@ export default function StructuredData({ baseUrl }: StructuredDataProps) {
       addressCountry: "US",
     },
     slogan:
-      "The world's fastest way to transform your sales team into a predictable cash machine",
+      "The world's fastest way to transform your sales team into a predictable cash machine.",
   };
 
   // WebSite Schema - Enables sitelinks search box in Google
@@ -75,7 +75,7 @@ export default function StructuredData({ baseUrl }: StructuredDataProps) {
     name: "SalesAgency.ai",
     url: baseUrl,
     description:
-      "The world's fastest way to transform your sales team into a predictable cash machine. We automate the tedious, surface the critical, and keep your team operating at peak performance.",
+      "The world's fastest way to transform your sales team into a predictable cash machine.",
     potentialAction: {
       "@type": "SearchAction",
       target: {

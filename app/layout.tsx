@@ -26,7 +26,7 @@ const baseUrl = PRODUCTION_URL;
 
 export const metadata: Metadata = {
   title: "SalesAgency.ai - Scalable Sales Systems",
-  description: "The world's fastest way to transform your sales team into a predictable cash machine. We automate the tedious, surface the critical, and keep your team operating at peak performance.",
+  description: "The world's fastest way to transform your sales team into a predictable cash machine.",
   metadataBase: new URL(baseUrl),
 
   // Keywords for SEO (organized by strategic importance)
@@ -159,7 +159,7 @@ export const metadata: Metadata = {
     siteName: "SalesAgency.ai",
     title: "SalesAgency.ai - Scalable Sales Systems",
     description:
-      "The world's fastest way to transform your sales team into a predictable cash machine. We automate the tedious, surface the critical, and keep your team operating at peak performance.",
+      "The world's fastest way to transform your sales team into a predictable cash machine.",
     images: [
       {
         url: `${baseUrl}/og_image.jpg`,
@@ -177,7 +177,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SalesAgency.ai - Scalable Sales Systems",
     description:
-      "The world's fastest way to transform your sales team into a predictable cash machine. We automate the tedious, surface the critical, and keep your team operating at peak performance.",
+      "The world's fastest way to transform your sales team into a predictable cash machine.",
     images: [`${baseUrl}/og_image.jpg`],
     creator: "@salesagencyceo",
     site: "@salesagencyceo",
