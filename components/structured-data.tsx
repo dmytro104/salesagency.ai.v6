@@ -65,7 +65,7 @@ export default function StructuredData({ baseUrl }: StructuredDataProps) {
       addressCountry: "US",
     },
     slogan:
-      "Scale your outbound sales with autonomous AI SDRs at 90% lower cost",
+      "The world's fastest way to transform your sales team into a predictable cash machine",
   };
 
   // WebSite Schema - Enables sitelinks search box in Google
@@ -75,7 +75,7 @@ export default function StructuredData({ baseUrl }: StructuredDataProps) {
     name: "SalesAgency.ai",
     url: baseUrl,
     description:
-      "Scale your outbound sales with autonomous AI SDRs. Personalized outreach across email, LinkedIn, and phone at 90% lower cost than human SDRs.",
+      "The world's fastest way to transform your sales team into a predictable cash machine. We automate the tedious, surface the critical, and keep your team operating at peak performance.",
     potentialAction: {
       "@type": "SearchAction",
       target: {

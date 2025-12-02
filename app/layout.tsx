@@ -26,7 +26,7 @@ const baseUrl = PRODUCTION_URL;
 
 export const metadata: Metadata = {
   title: "SalesAgency.ai - Scalable Sales Systems",
-  description: "Scale your outbound sales with autonomous AI SDRs. Personalized outreach across email, LinkedIn, and phone at 90% lower cost than human SDRs.",
+  description: "The world's fastest way to transform your sales team into a predictable cash machine. We automate the tedious, surface the critical, and keep your team operating at peak performance.",
   metadataBase: new URL(baseUrl),
 
   // Keywords for SEO (organized by strategic importance)
@@ -159,7 +159,7 @@ export const metadata: Metadata = {
     siteName: "SalesAgency.ai",
     title: "SalesAgency.ai - Scalable Sales Systems",
     description:
-      "Scale your outbound sales with autonomous AI SDRs. Personalized outreach across email, LinkedIn, and phone at 90% lower cost than human SDRs.",
+      "The world's fastest way to transform your sales team into a predictable cash machine. We automate the tedious, surface the critical, and keep your team operating at peak performance.",
     images: [
       {
         url: `${baseUrl}/og_image.jpg`,
@@ -177,7 +177,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SalesAgency.ai - Scalable Sales Systems",
     description:
-      "Scale your outbound sales with autonomous AI SDRs. Personalized outreach across email, LinkedIn, and phone at 90% lower cost than human SDRs.",
+      "The world's fastest way to transform your sales team into a predictable cash machine. We automate the tedious, surface the critical, and keep your team operating at peak performance.",
     images: [`${baseUrl}/og_image.jpg`],
     creator: "@salesagencyceo",
     site: "@salesagencyceo",
